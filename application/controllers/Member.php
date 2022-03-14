@@ -43,7 +43,7 @@ class Member extends CI_Controller{
 	      			$insert = $this->Member_model->insert_member($school_id, $fullname, $email, $date); 
 	      	
 	      			if($insert){
-	      				show_message($success, $add); // Inserts the input
+	      				show_message($success, $opp); // Inserts the input
 	      				echo "<script>window.location.href='view';</script>";	
 	      		}else{
 	      			show_message($failed);
