@@ -29,7 +29,8 @@ class Member extends CI_Controller{
 		$date = date('Y-m-d H:i:s');
 
 		$success = "success";
-	  	$failed = "failed";		
+	  	$failed = "failed";
+		$required = "require";
 	  	$opp = "add";
 
 	    	$form_valid = $this->form_validation->run();
@@ -39,17 +40,21 @@ class Member extends CI_Controller{
 			$data['school'] = $this->School_model->display_all_schools();
 	        	$this->load->view('member/add', $data);
 	   	 }else{ 
-	      		if(isset($submit)){
+	      		if(isset($submit) && $school_id != 'empty'){
 	      			$insert = $this->Member_model->insert_member($school_id, $fullname, $email, $date); 
 	      	
 	      			if($insert){
 	      				show_message($success, $opp); // Inserts the input
 	      				echo "<script>window.location.href='view';</script>";	
-	      		}else{
-	      			show_message($failed);
-	      		}
-	     	}
-	    }
+				}else{
+					show_message($failed);
+					echo "<script>location.href='add'</script>";
+				}
+	     		}else{
+				show_message($success, $required);
+				echo "<script>location.href='add'</script>";
+		      	}	
+	    	}
 	}
 
 	public function edit($id){
@@ -81,6 +86,7 @@ class Member extends CI_Controller{
 		        		echo "<script>window.location.href='../view';</script>";	
 		        	}else{
 		        		show_message($failed);
+					echo "<script>location.href='../view'</script>";
 		        	}
 		        }
 		    }
@@ -91,7 +97,6 @@ class Member extends CI_Controller{
 
 	public function delete_member(){
       		$id = $this->input->post('id');
-
       		$this->Member_model->delete_member($id);
     	}
 }
