@@ -57,9 +57,9 @@ class School_model extends CI_Model{
 	}
 
 	public function delete_school($id){
-        	$this->db->where('id', $id);
-        	return $this->db->delete("school");
-    	}
+        $this->db->where('id', $id);
+        return $this->db->delete("school");
+    }
 
 	// End of School  
 
