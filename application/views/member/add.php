@@ -25,7 +25,7 @@
 									<label class="col-sm-2 control-label">School</label>
 									<div class="col-sm-8">
 										<select name="school_id" class="form-control1">
-											<option>Select</option>
+											<option value="empty">Select</option>
 											<?php if(!empty($school)){ foreach($school as $sch){ ?>
 											<option value="<?php echo $sch['id']; ?>"><?php echo $sch['school_name']; ?></option>
 											<?php } } ?>
