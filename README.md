@@ -16,7 +16,7 @@ To ensure this project runs effectively, there are some configurations that woul
 ### Config
 	1. Navigate to the application folder -> config folder -> find the config.php file 
 	2. find the $config['base_url']; variable.
-	3. Change the $config['base_url'] = "{to the downloaded project folder in your localhost}"; E.g $config['base_url'] = "http://localhost/example";
+	3. Change the $config['base_url'] = "{to the downloaded project folder in your localhost}"; E.g $config['base_url'] = "http://localhost/{school_demo}";
 	
 ### Database
 	1. Navigate to the application folder -> config folder -> find the database.php file
