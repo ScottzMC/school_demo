@@ -67,7 +67,7 @@ class School extends CI_Controller{
                     echo "<script>window.location.href='view';</script>";	// Redirects the user upon action
                 }else{
                     show_message($failed); 
-                    echo "<script>location.href='../view'</script>";
+                    echo "<script>location.href='add'</script>";
                 }
             }
         }
