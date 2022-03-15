@@ -31,6 +31,7 @@ The two primary classes that are being tested are the School and Members. To car
 In order to run this test, the name of this class is School_test that holds all the test for the School Controller class. 
 You would need to put the name of the {class/test function} in the url. e.g http://localhost/school_demo/school_test/{test_function}
 The available functions found in the School_test are:
+
 	test_all_school()
 	test_school_by_id()
 	test_members_by_school()
@@ -39,5 +40,6 @@ The available functions found in the School_test are:
 In order to run this test, the name of this class is Member_test that holds all the test for the Member Controller class. 
 You would need to put the name of the {class/test function} in the url. e.g http://localhost/school_demo/member_test/{test_function}
 The available functions found in the Member_test are:
+
 	test_all_members()
 	test_members_by_id()
